@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Para Crystiel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Gato reutilizable (ilustración SVG propia) -->
+<svg width="0" height="0" style="position:absolute"><symbol id="cat" viewBox="0 0 100 60">
+<ellipse cx="45" cy="40" rx="38" ry="17" fill="currentColor"/><circle cx="78" cy="35" r="14" fill="currentColor"/>
+<path d="M67 27l3-17 10 11zM80 21l10-11 1 17z" fill="currentColor"/>
+<path d="M9 42c-10-4-8-16 2-18" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M72 35q3 3 6 0M80 35q3 3 6 0" stroke="#fbf6ee" stroke-width="1.6" fill="none" stroke-linecap="round"/></symbol></svg>
+
+<!-- PORTADA -->
+<main id="cover">
+  <div class="cbook" id="cbook">
+    <div class="tulips">🌷 🌹 🌷</div>
+    <h1>Para Crystiel</h1>
+    <p class="sub">Un pequeño libro hecho de palabras, recuerdos y cosas bonitas.</p>
+    <div class="paper" aria-hidden="true">✉️</div>
+    <svg class="cat" viewBox="0 0 100 60"><use href="#cat"/></svg>
+    <button id="open" class="btn">Abrir libro ✨</button>
+  </div>
+</main>
+
+<!-- LIBRO -->
+<div id="book" hidden>
+  <header><div id="prog"><i id="bar"></i></div><span id="lbl"></span></header>
+  <div id="track">
+
+    <!-- CAPÍTULO 1 -->
+    <section class="page" data-t="Cap. 1 · Una pequeña carta"><div class="in">
+      <h2>Antes de empezar...</h2>
+      <button class="env" id="env" aria-label="Abrir carta"><span>✉️</span><small>toca para abrir</small></button>
+      <article class="letter" id="letter">
+        <div class="tape"></div><div class="press">🌼</div>
+        <p class="hand">Crystiel:</p>
+        <p class="hand">Este librito no tiene una razón enorme. Solo pensé que hay cosas que merecen guardarse: una tarde tranquila, una flor bonita, una buena plática.</p>
+        <p class="hand">Gracias por darle un ratito a este detalle. Apenas nos estamos conociendo, así que este libro tiene varias páginas en blanco a propósito.</p>
+        <p class="hand">Lo hice sin prisa y pensando en ti. Si algo quedó chueco, cuéntalo como encanto artesanal HJASDHJ.</p>
+        <p class="hand">Ponte cómoda, quizá con algo caliente o botana ^^, y pasa las páginas con calma.</p>
+        <p class="hand sig">— Alguien que pensó en ti (yo KJASD Marco)</p>
+        <svg class="egg cat" viewBox="0 0 100 60"><use href="#cat"/></svg>
+      </article>
+    </div></section>
+
+    <!-- CAPÍTULO 2 -->
+    <section class="page" data-t="Cap. 2 · Pequeñas cosas"><div class="in">
+      <h2>Pequeñas cosas</h2>
+      <p class="lead">Un escritorio,  Con frases que te dedico. Toca alguno.</p>
+      <div class="desk" id="desk"></div>
+      <p class="note" id="note">…</p>
+    </div></section>
+
+    <!-- CAPÍTULO 3 -->
+    <section class="page" data-t="Cap. 3 · Álbum en blanco"><div class="in">
+      <h2>Álbum en blanco (por ahora)</h2>
+      <p class="lead">Aún no hay fotos pipipi, y está bien. Toca una página para ver qué podría ir ahí.</p>
+      <div class="album" id="album"></div>
+      <svg class="egg peek" viewBox="0 0 100 60"><use href="#cat"/></svg>
+    </div></section>
+
+    <!-- CAPÍTULO 4 -->
+    <section class="page rainy" data-t="Cap. 4 · Días de lluvia"><div class="in">
+      <div class="win">
+        <i class="bokeh b1"></i><i class="bokeh b2"></i><i class="bokeh b3"></i>
+        <canvas id="rain"></canvas><div class="fog"></div>
+        <button class="drop" style="left:14%;top:18%" data-i="0" aria-label="gota"></button>
+        <button class="drop" style="left:72%;top:30%" data-i="1" aria-label="gota"></button>
+        <button class="drop" style="left:40%;top:48%" data-i="2" aria-label="gota"></button>
+        <button class="drop" style="left:85%;top:62%" data-i="3" aria-label="gota"></button>
+        <button class="drop" style="left:22%;top:74%" data-i="4" aria-label="gota"></button>
+      </div>
+      <h2>Días de lluvia</h2>
+      <p class="poem">Afuera llueve despacio<br>y el vidrio se llena de mapas<br>que nadie más va a leer.</p>
+      <p class="note light" id="dropmsg">Toca las gotas del cristal.</p>
+    </div></section>
+
+    <!-- CAPÍTULO 5 -->
+    <section class="page cozy" data-t="Cap. 5 · Tardes tranquilas"><div class="in">
+      <div class="scene">
+        <div class="glass">🌫️</div>
+        <div class="items"><span>🌷</span><span>📖</span><span>☕</span></div>
+        <svg class="egg sleep" viewBox="0 0 100 60"><use href="#cat"/></svg>
+      </div>
+      <h2>Tardes tranquilas</h2>
+      <p class="poem">Luz de las cinco, taza tibia,<br>una página que no quiere terminar.<br>Afuera hace frío; aquí adentro<br>el tiempo se acomoda y se queda.</p>
+    </div></section>
+
+    <!-- CAPÍTULO 6 -->
+    <section class="page" data-t="Cap. 6 · Museo de recuerdos"><div class="in">
+      <h2>Un pequeño museo</h2>
+      <p class="lead">Desliza hacia abajo para recorrer las obras.</p>
+      <div id="museum"></div>
+    </div></section>
+
+    <!-- CAPÍTULO 7 -->
+    <section class="page" data-t="Cap. 7 · Entre flores"><div class="in">
+      <h2>Entre flores</h2>
+      <p class="lead">Toca una flor.</p>
+      <div class="garden" id="garden"></div>
+      <svg class="egg peek2" viewBox="0 0 100 60"><use href="#cat"/></svg>
+    </div></section>
+
+    <!-- CAPÍTULO 8 -->
+    <section class="page" data-t="Cap. 8 · Cosas que se quedan"><div class="in">
+      <h2>Cosas que se quedan</h2>
+      <p class="lead">Una cajita. Ábrela con calma.</p>
+      <div class="box" id="box"></div>
+    </div></section>
+
+    <!-- CAPÍTULO 9 · JUEGO: PÉTALOS -->
+    <section class="page" data-t="Cap. 9 · Lluvia de pétalos"><div class="in">
+      <h2>Lluvia de pétalos</h2>
+      <p class="lead">Atrapa 10 pétalos antes de que caigan.</p>
+      <div class="arena" id="arena"></div>
+      <p class="note" id="pscore">Pétalos: 0 / 10</p>
+      <div style="text-align:center"><button class="btn" id="pstart">Empezar</button></div>
+    </div></section>
+
+    <!-- CAPÍTULO 10 · JUEGO: MEMORAMA -->
+    <section class="page" data-t="Cap. 10 · Memorama"><div class="in">
+      <h2>Memorama</h2>
+      <p class="lead">Encuentra las parejas. Sin prisa.</p>
+      <div class="mem" id="mem"></div>
+      <p class="note" id="mmsg">Movimientos: 0</p>
+      <div style="text-align:center"><button class="btn" id="mreset">Reiniciar</button></div>
+    </div></section>
+
+    <!-- CAPÍTULO 11 · ARMA UN RAMO -->
+    <section class="page" data-t="Cap. 11 · Arma un ramo"><div class="in">
+      <h2>Arma un ramo</h2>
+      <p class="lead">Elige hasta 7 flores. Ninguna combinación está mal.</p>
+      <div class="vase" id="vase"><span class="ph">tu ramo</span></div>
+      <div class="picks" id="picks"></div>
+      <div style="text-align:center"><button class="btn" id="vsave">Guardar ramo</button> <button class="btn" id="vclear" style="background:var(--blue);box-shadow:0 4px 0 #93b0cf">Limpiar</button></div>
+    </div></section>
+
+    <!-- CAPÍTULO 12 · FRASCO DE PLANES -->
+    <section class="page" data-t="Cap. 12 · El frasco"><div class="in">
+      <h2>El frasco de papelitos</h2>
+      <p class="lead">Ideas pequeñas para una tarde tranquila.</p>
+      <button class="jar" id="jar" aria-label="Sacar un papelito">🫙<small>toca para sacar uno</small></button>
+      <p class="slip" id="slip"></p>
+    </div></section>
+
+    <!-- FINAL -->
+    <section class="page last" data-t="Última página"><div class="in">
+      <h2 class="big">Gracias.</h2>
+      <!-- SUSTITUIR: poema final -->
+      <p class="poem">Gracias por leer hasta aquí,<br>por darle tiempo a un detalle pequeño,<br>por notar lo que casi nadie señala.<br><br>Que siempre haya lluvia cuando la quieras,<br>flores sin motivo, un gato cerca<br>y algo bonito que valga la pena guardar.</p>
+      <p class="fin">Fin del libro.</p>
+      <p class="lead"><em>Aunque algunas páginas siempre pueden volver a abrirse.</em></p>
+      <div class="end"><span>🌷</span><svg class="egg cat" viewBox="0 0 100 60"><use href="#cat"/></svg><span>🌼</span></div>
+      <button class="btn" id="again">Volver al inicio</button>
+    </div></section>
+  </div>
+  <nav><button id="prev" aria-label="Anterior">‹</button><button id="next" aria-label="Siguiente">›</button></nav>
+</div>
+
+<div id="modal" hidden><div class="card" id="card"></div></div>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
